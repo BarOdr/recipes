@@ -37,6 +37,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="91.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="glE-zR-RNe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="91.5"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy cocktail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYz-KL-5mb">
                                                     <rect key="frame" x="8" y="27" width="584" height="38"/>
                                                     <constraints>
@@ -48,9 +51,6 @@
                                                     <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="glE-zR-RNe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="91.5"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="FYz-KL-5mb" firstAttribute="centerX" secondItem="0R4-Cb-H97" secondAttribute="centerX" id="0QD-yV-PAI"/>
@@ -107,13 +107,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Recipe ingredients" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvj-9k-Swx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Recipe ingredients" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tvj-9k-Swx">
                                 <rect key="frame" x="20" y="158" width="560" height="30"/>
                                 <color key="textColor" red="0.8840144231" green="0.8840144231" blue="0.8840144231" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Recipe steps" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N7w-Md-WTM">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Recipe steps" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N7w-Md-WTM">
                                 <rect key="frame" x="20" y="207" width="560" height="30"/>
                                 <color key="textColor" red="0.8840144231" green="0.8840144231" blue="0.8840144231" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
@@ -145,8 +145,11 @@
                                     <constraint firstAttribute="width" constant="93" id="ZCd-CB-OpL"/>
                                 </constraints>
                                 <state key="normal" title="Create recipe"/>
+                                <connections>
+                                    <action selector="createRecipeBtnPressed:" destination="kf9-qL-i11" eventType="touchUpInside" id="tTB-Ha-B4L"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Recipe title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DHo-Rx-qXJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Recipe title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DHo-Rx-qXJ">
                                 <rect key="frame" x="20" y="106" width="560" height="30"/>
                                 <color key="textColor" red="0.8840144231" green="0.8840144231" blue="0.8840144231" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>

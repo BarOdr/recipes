@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -43,5 +44,29 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         chooseImgBtn.setTitle("", forState: .Normal)
     }
     
-    
+    @IBAction func createRecipeBtnPressed(sender: AnyObject) {
+        if let title = recipeTitle.text where title != "" {
+            
+            let app = UIApplication.sharedApplication().delegate as! AppDelegate
+            let context = app.managedObjectContext
+            let entity = NSEntityDescription.entityForName("Recipe", inManagedObjectContext: context)!
+            let recipe = Recipe(entity: entity, insertIntoManagedObjectContext: context)
+            // now we assign values
+            recipe.title = title
+            recipe.ingredients = recipeIngredients.text
+            recipe.steps = recipeSteps.text
+            recipe.setRecipeImage(recipeImg.image!)
+            
+            context.insertObject(recipe)
+            
+            do {
+                try context.save()
+            } catch let err as NSError {
+                print(err.debugDescription)
+                print("Could not save recipe")
+            }
+            
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+    }
 }
