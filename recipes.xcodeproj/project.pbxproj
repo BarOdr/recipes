@@ -18,6 +18,7 @@
 		CC4090B71CE08FC10001820F /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4090B51CE08FC10001820F /* Recipe+CoreDataProperties.swift */; };
 		CC4090B81CE08FC10001820F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4090B61CE08FC10001820F /* Recipe.swift */; };
 		CC4090BA1CE093410001820F /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4090B91CE093410001820F /* RecipeCell.swift */; };
+		CC4090BC1CE0A4800001820F /* CreateRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4090BB1CE0A4800001820F /* CreateRecipeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		CC4090B51CE08FC10001820F /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CC4090B61CE08FC10001820F /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
 		CC4090B91CE093410001820F /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		CC4090BB1CE0A4800001820F /* CreateRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				CC4090831CDFE7030001820F /* ViewController.swift */,
+				CC4090BB1CE0A4800001820F /* CreateRecipeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				CC4090B71CE08FC10001820F /* Recipe+CoreDataProperties.swift in Sources */,
 				CC40908A1CDFE7030001820F /* recipes.xcdatamodeld in Sources */,
 				CC4090BA1CE093410001820F /* RecipeCell.swift in Sources */,
+				CC4090BC1CE0A4800001820F /* CreateRecipeVC.swift in Sources */,
 				CC4090821CDFE7030001820F /* AppDelegate.swift in Sources */,
 				CC4090B81CE08FC10001820F /* Recipe.swift in Sources */,
 			);

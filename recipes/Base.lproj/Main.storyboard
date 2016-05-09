@@ -11,7 +11,6 @@
             <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
-            <string>HelveticaNeue</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -96,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1337" y="-65"/>
         </scene>
-        <!--View Controller-->
+        <!--Create RecipeVC-->
         <scene sceneID="UHe-tY-Q7c">
             <objects>
-                <viewController id="kf9-qL-i11" sceneMemberID="viewController">
+                <viewController id="kf9-qL-i11" customClass="CreateRecipeVC" customModule="recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EVh-IH-k1s"/>
                         <viewControllerLayoutGuide type="bottom" id="GnJ-N8-C9R"/>
@@ -120,7 +119,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuU-4P-rHu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fooddefault" translatesAutoresizingMaskIntoConstraints="NO" id="KuU-4P-rHu">
                                 <rect key="frame" x="213" y="285" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="Usw-jV-Tkn"/>
@@ -129,10 +128,15 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCB-2l-exM">
                                 <rect key="frame" x="213" y="285" width="175" height="175"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <size key="titleShadowOffset" width="1" height="2.2250738585072014e-308"/>
                                 <state key="normal" title="CHOOSE IMAGE">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseImgBtnPressed:" destination="kf9-qL-i11" eventType="touchUpInside" id="ciT-XG-tYm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03K-1j-lbB">
                                 <rect key="frame" x="254" y="496" width="93" height="30"/>
@@ -170,6 +174,14 @@
                             <constraint firstItem="tvj-9k-Swx" firstAttribute="leading" secondItem="vXu-eL-hIf" secondAttribute="leadingMargin" id="s9e-VV-LZV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addRecipeBtn" destination="03K-1j-lbB" id="E97-Ga-zou"/>
+                        <outlet property="chooseImgBtn" destination="CCB-2l-exM" id="1L5-fN-ZqF"/>
+                        <outlet property="recipeImg" destination="KuU-4P-rHu" id="uKs-yS-R1k"/>
+                        <outlet property="recipeIngredients" destination="tvj-9k-Swx" id="yMl-j1-YRW"/>
+                        <outlet property="recipeSteps" destination="N7w-Md-WTM" id="IoB-68-2jb"/>
+                        <outlet property="recipeTitle" destination="DHo-Rx-qXJ" id="xd3-8M-ZUG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJg-hr-B8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -195,4 +207,7 @@
             <point key="canvasLocation" x="309" y="-325"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fooddefault" width="512" height="512"/>
+    </resources>
 </document>
