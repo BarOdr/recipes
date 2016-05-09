@@ -15,6 +15,9 @@
 		CC40908F1CDFE7040001820F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC40908D1CDFE7040001820F /* LaunchScreen.storyboard */; };
 		CC40909A1CDFE7040001820F /* recipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4090991CDFE7040001820F /* recipesTests.swift */; };
 		CC4090A51CDFE7040001820F /* recipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4090A41CDFE7040001820F /* recipesUITests.swift */; };
+		CC4090B71CE08FC10001820F /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4090B51CE08FC10001820F /* Recipe+CoreDataProperties.swift */; };
+		CC4090B81CE08FC10001820F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4090B61CE08FC10001820F /* Recipe.swift */; };
+		CC4090BA1CE093410001820F /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4090B91CE093410001820F /* RecipeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		CC4090A01CDFE7040001820F /* recipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = recipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4090A41CDFE7040001820F /* recipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipesUITests.swift; sourceTree = "<group>"; };
 		CC4090A61CDFE7040001820F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC4090B51CE08FC10001820F /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CC4090B61CE08FC10001820F /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
+		CC4090B91CE093410001820F /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +105,10 @@
 		CC4090801CDFE7030001820F /* recipes */ = {
 			isa = PBXGroup;
 			children = (
+				CC4090B41CE08F530001820F /* Controller */,
+				CC4090B31CE08F500001820F /* View */,
+				CC4090B21CE08F4C0001820F /* Model */,
 				CC4090811CDFE7030001820F /* AppDelegate.swift */,
-				CC4090831CDFE7030001820F /* ViewController.swift */,
 				CC4090851CDFE7030001820F /* Main.storyboard */,
 				CC40908B1CDFE7030001820F /* Assets.xcassets */,
 				CC40908D1CDFE7040001820F /* LaunchScreen.storyboard */,
@@ -126,6 +134,31 @@
 				CC4090A61CDFE7040001820F /* Info.plist */,
 			);
 			path = recipesUITests;
+			sourceTree = "<group>";
+		};
+		CC4090B21CE08F4C0001820F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC4090B51CE08FC10001820F /* Recipe+CoreDataProperties.swift */,
+				CC4090B61CE08FC10001820F /* Recipe.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CC4090B31CE08F500001820F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC4090B91CE093410001820F /* RecipeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CC4090B41CE08F530001820F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC4090831CDFE7030001820F /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +296,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC4090841CDFE7030001820F /* ViewController.swift in Sources */,
+				CC4090B71CE08FC10001820F /* Recipe+CoreDataProperties.swift in Sources */,
 				CC40908A1CDFE7030001820F /* recipes.xcdatamodeld in Sources */,
+				CC4090BA1CE093410001820F /* RecipeCell.swift in Sources */,
 				CC4090821CDFE7030001820F /* AppDelegate.swift in Sources */,
+				CC4090B81CE08FC10001820F /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +527,7 @@
 				CC4090AB1CDFE7040001820F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC4090AC1CDFE7040001820F /* Build configuration list for PBXNativeTarget "recipesTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +536,7 @@
 				CC4090AE1CDFE7040001820F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC4090AF1CDFE7040001820F /* Build configuration list for PBXNativeTarget "recipesUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +545,7 @@
 				CC4090B11CDFE7040001820F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
